@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цікаві факти з інформатики</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="icon" href="gangster.jpg" type="image/png">
+  <style>
+   body {
+    background-color: #0f141a;
+    color: #e0e0e0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  header {
+    background-color: #111;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .logo h1 {
+    color: #1abc9c;
+    font-size: 1.5em;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: rgba(26, 188, 156, 0.2);
+    color: #1abc9c;
+  }
+
+  /* --- СТИЛЬ ФАКТІВ --- */
+  .facts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .fact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(26, 188, 156, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    transform: translateY(20px) scale(1);
+    opacity: 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  .fact-card.visible {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  /* 🟢 ЕФЕКТ ПРИ НАВЕДЕННІ */
+  .fact-card:hover {
+    background: rgba(26, 188, 156, 0.15);
+    border-color: #1abc9c;
+    box-shadow: 0 0 25px rgba(26, 188, 156, 0.5);
+    transform: scale(1.58);
+  }
+
+  .fact-card h3 {
+    color: #1abc9c;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+    border-top: 1px solid rgba(26, 188, 156, 0.2);
+    margin-top: 50px;
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="gangster.jpg" alt="Логотип">
+      
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Головна</a></li>
+        <li><a href="../aboutMe/biography.html">Про мене</a></li>
+        <li><a href="../students/5-8.html">5–8 класи</a></li>
+        <li><a href="../students/9-11.html">9–11 класи</a></li>
+        <li><a href="../teachers/presentations.html">Презентації</a></li>
+        <li><a href="facts.html" class="active">Факти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 style="text-align:center; color:#1abc9c; margin-top:40px;">Цікаві факти про інформатику </h2>
+    <div class="facts-container">
+      <div class="fact-card"><h3>1</h3><p>Перший прототип комп’ютерної миші винайшов Дуглас Енгельбарт у 1964 році. Вона мала лише одну кнопку і була зроблена з дерева.</p></div>
+      <div class="fact-card"><h3>2</h3><p>Перший електронний комп’ютер ENIAC важив понад 27 тонн!</p></div>
+      <div class="fact-card"><h3>3</h3><p>Вчені створюють комп’ютери з ДНК — вони можуть виконувати обчислення на молекулярному рівні, і це майбутнє нанотехнологій.</p></div>
+      <div class="fact-card"><h3>4</h3><p>Google обробляє понад 100 000 запитів щосекунди.</p></div>
+      <div class="fact-card"><h3>5</h3><p>Назва “Bluetooth” походить від імені скандинавського короля Гаральда “Синьозубого”.</p></div>
+      <div class="fact-card"><h3>6</h3><p>Перший вірус для ПК називався “Brain” і з’явився у 1986 році.</p></div>
+      <div class="fact-card"><h3>7</h3><p>Кожна мова програмування (Python, JavaScript, C++) має власну “граматику”, синтаксис і навіть діалекти — тому її вивчення схоже на вивчення людської мови.</p></div>
+      <div class="fact-card"><h3>8</h3><p>У 1991 році було створено перший вебсайт — він все ще існує!</p></div>
+      <div class="fact-card"><h3>9</h3><p>Комп’ютери не можуть генерувати справжні випадкові числа без зовнішнього впливу.</p></div>
+      <div class="fact-card"><h3>10</h3><p>Більше 90% світових грошей існує лише в електронному вигляді.</p></div>
+      <div class="fact-card"><h3>11</h3><p>Нерозуміння мов програмування: Комп'ютери не розуміють мови програмування безпосередньо; код потрібно компілювати або інтерпретувати. </p></div>
+      <div class="fact-card"><h3>12</h3><p>Якщо прийняти всі email-повідомлення, передані в світі, за 100%, то 94% з них припадає на спам.</p></div>
+      <div class="fact-card"><h3>13</h3><p>У 1947 році програмісти знайшли справжню міль, що застрягла в реле комп’ютера Harvard Mark II.
+Так і народився термін “debugging”</p></div>
+      <div class="fact-card"><h3>14</h3><p>Телефон, який ми тримаємо в руках, у тисячі разів потужніший за комп’ютери, що керували польотом “Аполлона-11” на Місяць.</p></div>
+      <div class="fact-card"><h3>15</h3><p>Фізик Вільям Хіггінботам створив гру “Tennis for Two” — це був прообраз сучасного “Pong”. Вона працювала на осцилографі!</p></div>
+      
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Сайт вчителя інформатики. Всі права захищено.</p>
+  </footer>
+
+  <script>
+    // Анімація появи карток фактів при прокрутці
+    const factCards = document.querySelectorAll('.fact-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    factCards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
