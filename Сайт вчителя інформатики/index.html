@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Вчителя Інформатики: Зозулі Олександра Геннадійовича</title>
+
+    <!-- <section class="hero">
+  <div class="overlay">
+    <h1>Сайт вчителя інформатики: Зозулі Олександра</h1>
+    <p>Сучасна освіта у цифровому світі</p>
+  </div>
+</section>  -->
+
+    <!-- лого. icon -->
+    <link rel="icon" type="image/png" href="gangster.jpg">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<script>
+const pages = [
+  { name: "Головна", url: "index.html" },
+  { name: "5–8 клас", url: "pages/5-8.html" },
+  { name: "9–11 клас", url: "pages/9-11.html" },
+  { name: "Про мене", url: "pages/about/biography.html" },
+  { name: "Вчителям", url: "pages/teachers.html" },
+  { name: "Планування", url: "pages/teachers/plan.html" },
+  { name: "Факти", url: "pages/facts.html" }
+];
+
+const searchInput = document.getElementById("siteSearch");
+const resultsList = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", function() {
+  const term = this.value.toLowerCase().trim();
+  resultsList.innerHTML = "";
+
+  if (term === "") {
+    resultsList.style.display = "none";
+    return;
+  }
+
+  const filtered = pages.filter(p => p.name.toLowerCase().includes(term));
+
+  if (filtered.length === 0) {
+    resultsList.innerHTML = "<li>Нічого не знайдено...</li>";
+  } else {
+    filtered.forEach(p => {
+      const li = document.createElement("li");
+      li.textContent = p.name;
+      li.addEventListener("click", () => window.location.href = p.url);
+      resultsList.appendChild(li);
+    });
+  }
+
+  resultsList.style.display = "block";
+});
+
+// При кліку поза — ховаємо список
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".site-search")) {
+    resultsList.style.display = "none";
+  }
+});
+</script>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <img src="gangster.jpg" alt="Логотип" class="logo">
+            <h4>Сайт вчителя інформатики. Зозулі Олександра Геннадійовича</h4>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#">Для Учнів ▾</a>
+                        <ul class="submenu">
+                            <li><a href="pages/students/5-8.html">5-8 клас</a></li>
+                            <li><a href="pages/students/9-11.html">9-11 клас</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Для Вчителів ▾</a>
+                        <ul class="submenu">
+                            <li><a href="pages/teachers/planyvanna.html">календарно-тематичні планування</a></li>                                           
+                            <li><a href="pages/teachers/presentations.html">Презентації</a></li>
+                        </ul>
+                    </li>                                               
+                    <li>
+                        <a href="#">Блог ▾</a>
+                        <ul class="submenu">
+                            <li><a href="pages/blog/projects.html">Проекти</a></li>
+                            <li><a href="pages/blog/facts.html">Факти</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/aboutMe/biography.html">Про мене</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="site-search">
+    <input type="text" id="siteSearch" placeholder="🔍 Пошук по сайту...">
+    <ul id="searchResults" class="search-results"></ul>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Ласкаво просимо на сайт вчителя інформатики</h1>
+                <p>Тут ви знайдете навчальні матеріали, корисні ресурси та цікаві проекти та багато іншого</p>
+            </div>
+        </section>
+
+        <!-- ПРО САЙТ -->
+<section class="about-site">
+  <div class="container">
+    <h2>Про цей вебсайт</h2>
+    <p>
+      Цей сайт створено для учнів, вчителів та батьків, щоб забезпечити зручний доступ до навчальних матеріалів,
+      презентацій, проєктів і корисних ресурсів з інформатики. 
+      Тут можна знайти завдання, уроки, поради для підготовки до ЗНО та інформацію про цифрові технології.
+    </p>
+  </div>
+</section>
+
+<!-- ОСТАННІ НОВИНИ -->
+<section class="news">
+  <div class="container">
+    <h2>Останні новини</h2>
+    <div class="news-list">
+      <div class="news-item">
+        <h3>🖥️ Оновлено матеріали для 10–11 класів</h3>
+        <p>Додано нові інтерактивні презентації з теми “Мультимедіа на веб-сторінках”.</p>
+        <span class="date">15 жовтня 2025</span>
+      </div>
+
+      <div class="news-item">
+        <h3>💡 Новий розділ “Цікаві факти”</h3>
+        <p>Розділ містить корисні факти про сучасні інформаційні технології.</p>
+        <span class="date">10 жовтня 2025</span>
+      </div>
+
+      <div class="news-item">
+        <h3>📚 Додано проєкти учнів</h3>
+        <p>Опубліковані найкращі учнівські вебсайти та мультимедійні роботи 2025 року.</p>
+        <span class="date">2 жовтня 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+         <!-- ПРО САЙТ 
+        <section class="intro">
+            <div class="container">
+                <h2>Про сайт</h2>
+                <p>Цей сайт створений для учнів та вчителів інформатики. Тут зібрано матеріали для навчання, методичні ресурси, уроки та презентації. Всі розділи організовані зручно та зрозуміло.</p>
+            </div>
+        </section>
+    </main>
+          -->
+    <footer>
+        <div class="container">
+            <h3>Електронна пошта: zozulasas62@gmail.com</h3>
+              <h3>Мобільний телефон: +380981553769</h3>
+            <p>© 2025 Вчитель інформатики. Всі права захищені.</p>
+        </div>
+    </footer>
+     <script src="script.js"></script>
+     
+</body>
+</html>
